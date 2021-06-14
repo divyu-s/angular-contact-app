@@ -1,0 +1,10 @@
+.main {
+  margin: 2vh 2vw;
+}
+.main__contactlist,
+.main__addnewcontact {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}

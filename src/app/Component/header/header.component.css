@@ -1,0 +1,11 @@
+.header {
+  margin: 2vh 2vw;
+  border: 1px solid black;
+  height: 50px;
+  line-height: 45px;
+  font-weight: bold;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  font-size: 30px;
+}

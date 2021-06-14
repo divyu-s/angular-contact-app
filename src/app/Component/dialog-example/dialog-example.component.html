@@ -1,0 +1,35 @@
+<button mat-dialog-title class="btn btn-danger" (click)="onNoClick()">
+  Close
+</button>
+<div mat-dialog-content class="form-group">
+  <label class="label" for="name">update name</label>
+  <mat-form-field>
+    <input class="form-control" id="name" matInput [formControl]="name" />
+  </mat-form-field>
+  <label class="label" for="phone_number">update phone number</label>
+  <mat-form-field>
+    <input
+      class="form-control"
+      id="phone_number"
+      matInput
+      [formControl]="phoneNumber"
+    />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="actions">
+  <button class="btn btn-light" mat-button (click)="onNoClick()">
+    No Thanks
+  </button>
+  <button
+    class="btn btn-light"
+    mat-button
+    [mat-dialog-close]="{
+      index: data.index,
+      name: name.value,
+      phone_number: phoneNumber.value
+    }"
+    cdkFocusInitial
+  >
+    Ok
+  </button>
+</div>

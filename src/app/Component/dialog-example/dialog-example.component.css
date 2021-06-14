@@ -1,0 +1,8 @@
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+.label {
+  font-weight: bold;
+  font-size: 15px;
+}

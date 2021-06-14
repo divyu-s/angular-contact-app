@@ -1,0 +1,37 @@
+<div class="main">
+  <div class="main__addnewcontact">Add a New Contact</div>
+  <app-add-contact
+    [contacts]="contacts"
+    (addContact)="addContact($event)"
+  ></app-add-contact>
+  <div class="main__contactlist">Your Contacts List</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>
+          {{ contact.name }}
+        </td>
+        <td>{{ contact.phone_number }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteContact(contact)">
+            Delete
+          </button>
+          <button
+            class="btn btn-primary mx-2"
+            mat-raised-button
+            (click)="openDialog(contact.id)"
+          >
+            Update
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
